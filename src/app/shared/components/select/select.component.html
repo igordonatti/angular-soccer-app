@@ -1,6 +1,9 @@
-`<ion-list>
+<ion-list class="w-[400px]">
   <ion-item>
     <ion-select label="Liga" placeholder="Selecione a liga">
+      @for(league of leagues$; track league.id) {
+        <ion-select-option>{{league.name}}</ion-select-option>
+      }
     </ion-select>
   </ion-item>
-</ion-list>`
+</ion-list>
